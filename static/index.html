@@ -1,0 +1,78 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#242A2E">
+</head>
+<body ng-app="eventFinder" ng-cloak>
+  <!--
+    Your HTML content here
+  -->
+    <div ng-controller="defaultCtrl" layout="column" style="height:100%" ng-cloak>
+
+  <section layout="row" flex>
+
+    <md-content flex>
+
+      <div layout="column" layout-align="top">
+          <md-toolbar class="ck-toolbar">
+              <div class="md-toolbar-tools">
+                <!-- <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+                  <md-icon ng-click="toggleLeft()" md-svg-icon="img/icons/menu.svg" hide-gt-md></md-icon>
+                </md-button> -->
+
+                <h2 style="font-weight: bold;" flex md-truncate class="ck-htwos">Event Finder</h2>
+        <!--        <md-button class="md-primary md-raised" id="ck-button" show-gt-md>Resume</md-button>-->
+              </div>
+          </md-toolbar>
+
+					<md-card class="data-card">
+							<div>
+                <h1 class="title-headings"><a id="Word_Frequency_0"></a>Events</h1>
+			          <md-input-container>
+			            <label class="data-text">Start Date</label>
+			            <input type="datetime" id="inputStartDate">
+			          </md-input-container>
+                <md-input-container>
+                  <label class="data-text">End Date</label>
+                  <input type="datetime" id="inputEndDate">
+                </md-input-container>
+                <md-input-container>
+                  <label class="data-text">Event type</label>
+                  <input type="number" id="inputEventType" ng-keypress="wfKeyEvent($event)">
+                </md-input-container>
+					</div>
+					<md-button id="ck-button" class="md-primary md-raised" ng-click="submitClick()">Find</md-button>
+					</md-card>
+      </div>
+
+			<div layout="row" layout-align="center" ng-repeat="response in responses">
+				<md-card>
+							<p class="data-text">{{response}}</p>
+				</md-card>
+			</div>
+
+      <div ui-view></div>
+
+    </md-content>
+
+  </section>
+
+</div>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script src="js/application.js"></script>
+</body>
+</html>
