@@ -1,5 +1,7 @@
 # Event Finder
 
+### Instructions
+
 Enter start date - `2017-11-05 20:00:00`
 Enter end date - `2017-11-15 20:00:00`
 Enter event type - 254
@@ -25,11 +27,11 @@ Enter event type - 111
 [{"_id":"59f45bcd9c0589fda823b6a6","createdBy":"Ashish","title":"Sports Fest","description":"Sports time","address":"B-13, Bhaveshwardeep, Road no. 21, Chembur, Mumbai-400071","startDate":"2017-11-10T14:30:00.000Z","endDate":"2017-11-15T14:30:00.000Z","eventType":111,"eventStatus":"99/100","price":"Rs. 5000","image":"http://event1.jpg","atendees":[{"name":"Jeff Bezos","image":"http://jeff.jpg","description":"Amazon Founder"}]}]
 ```
 
-# Import MongoDB database
+### Import MongoDB database
 
 `cd db && mongoimport --db events --collection events --file events.json`
 
-# Running server
+### Running server
 
 First Run:
 `npm install`
